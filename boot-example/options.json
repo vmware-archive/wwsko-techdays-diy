@@ -1,0 +1,5 @@
+{
+  "kubernetes": {
+    "etcd-mesos-framework-name": "etcd"
+  }
+}

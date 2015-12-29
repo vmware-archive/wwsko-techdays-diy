@@ -1,0 +1,9 @@
+---
+applications:
+- name: oinker-cf
+  memory: 256M
+  instances: 1
+  path: .
+  buildpack: ruby_buildpack
+  services:
+    - oink-db

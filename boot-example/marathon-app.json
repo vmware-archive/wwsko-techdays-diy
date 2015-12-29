@@ -1,0 +1,16 @@
+{
+  "id": "platform-demo",
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "azwickey/wwsko-demo",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "hostPort": 0, "containerPort": 8080, "protocol": "tcp"}
+      ]
+    }
+  },
+  "instances": 1,
+  "cpus": 1,
+  "mem": 512
+}
