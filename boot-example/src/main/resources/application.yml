@@ -1,2 +1,7 @@
-spring.data.cassandra.keyspace-name=${vcap.services.cassandra-db.credentials.keyspace:test}
-spring.data
+spring:
+  application:
+    name: platform-demo
+
+  data:
+    cassandra:
+      keyspace-name: ${vcap.services.cassandra-db.credentials.keyspace:test}
