@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.cassandra.config.java.AbstractCassandraConfiguration;
+import org.springframework.data.cassandra.core.CassandraAdminOperations;
 import org.springframework.data.cassandra.core.CassandraAdminTemplate;
 import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by azwickey on 12/23/15.
@@ -22,7 +24,8 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
     }
 
     @Bean
-    public CassandraAdminTemplate getCassandraAdminTemplate() throws Exception{
+    public CassandraAdminTemplate getAdminTemplate() throws Exception {
         return new CassandraAdminTemplate(session().getObject(), cassandraConverter());
     }
+
 }

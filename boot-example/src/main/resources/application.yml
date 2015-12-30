@@ -3,5 +3,14 @@ spring:
     name: platform-demo
 
   data:
+    rest:
+      basePath: /api
     cassandra:
-      keyspace-name: ${vcap.services.cassandra-db.credentials.keyspace:test}
+      keyspace-name: ${vcap.services.cassandra-db.credentials.keyspace:demo}
+
+---
+spring:
+  profiles: mesos
+  data:
+    cassandra:
+      spring.data.cassandra.contact-points: cassandra-dcos-node.cassandra.dcos.mesos

@@ -9,7 +9,7 @@ import java.util.UUID;
 /**
  * Created by azwickey on 12/23/15.
  */
-@Table("oinker")
+@Table("demo")
 public class Model {
 
     @PrimaryKey
@@ -17,6 +17,11 @@ public class Model {
     private String handle;
     private String content;
     private Date created;
+
+    public Model() {
+        this.created = new Date();
+        this.id = UUID.randomUUID().toString();
+    }
 
     public Model(String handle, String content) {
         this.handle = handle;
