@@ -13,4 +13,5 @@ spring:
   profiles: mesos
   data:
     cassandra:
-      spring.data.cassandra.contact-points: cassandra-dcos-node.cassandra.dcos.mesos
+      contact-points: cassandra-dcos-node.cassandra.dcos.mesos
+

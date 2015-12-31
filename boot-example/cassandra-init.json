@@ -1,5 +1,5 @@
 {
-    "id": "/cassandra-clear",
+    "id": "/cassandra-init",
     "container": {
         "type": "DOCKER",
         "docker": {
@@ -7,7 +7,7 @@
             "network": "HOST"
         }
     },
-    "cmd": "/usr/bin/cqlsh -e \"CREATE KEYSPACE demo WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };\" cassandra-dcos-node.cassandra.dcos.mesos 9160 && sleep 99999999",
+    "cmd": "/usr/bin/cqlsh -e \"CREATE KEYSPACE IF NOT EXISTS demo WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };\" cassandra-dcos-node.cassandra.dcos.mesos 9160 && echo 'executed'",
     "cpus": 0.1,
     "mem": 256.0
 }

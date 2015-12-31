@@ -7,10 +7,14 @@
       "network": "BRIDGE",
       "portMappings": [
         { "hostPort": 0, "containerPort": 8080, "protocol": "tcp"}
-      ]
+      ],
+      "forcePullImage": true
     }
+  },
+  "env": {
+    "SPRING_PROFILES_ACTIVE": "mesos"
   },
   "instances": 1,
   "cpus": 1,
-  "mem": 512
+  "mem": 1024
 }
