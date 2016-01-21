@@ -7,7 +7,7 @@
             "network": "HOST"
         }
     },
-    "cmd": "/usr/bin/cqlsh -e \"CREATE KEYSPACE IF NOT EXISTS demo WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };\" cassandra-dcos-node.cassandra.dcos.mesos 9160 && echo 'executed'",
+    "cmd": "/usr/bin/cqlsh -e \"CREATE KEYSPACE IF NOT EXISTS demo WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };\" cassandra-dcos-node.cassandra.dcos.mesos 9160 && /usr/bin/cqlsh -e \"insert into demo.demo (id, content, handle) values ('123456', 'content test', 'azwickey');\" cassandra-dcos-node.cassandra.dcos.mesos 9160 && echo 'executed'",
     "cpus": 0.1,
     "mem": 256.0
 }
