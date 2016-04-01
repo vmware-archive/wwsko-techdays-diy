@@ -19,6 +19,6 @@ Steps to deploy boot example on Mesos:
   * Main java app: dcos marathon app add marathon-app.json
   * Public NGinx Proxy: dcos marathon app add proxy/marathon-web-proxy.json
   * Access Application
-          curl -d '{"content":"init","handle":"azwickey"}' -H 'Content-Type: application/json' /api/models
-          curl /test
-          curl /api/models
+          ** curl -d '{"content":"init","handle":"azwickey"}' -H 'Content-Type: application/json' /api/models
+          ** curl /test
+          ** curl /api/models
