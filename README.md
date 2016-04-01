@@ -8,7 +8,7 @@ Steps to deploy boot example on Mesos:
   - dcos config set core.dcos_url $URL
   - dcos package install cassandra
 
-3) Deploy sample apps in boot exmaple direction
+3) Deploy sample apps in boot example direction
   - Docker image to update Cassandra: dcos marathon app add cassandra-init.json
   - Main java app: dcos marathon app add marathon-app.json
   - Public NGinx Proxy: dcos marathon app add proxy/marathon-web-proxy.json
